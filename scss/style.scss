@@ -1,0 +1,134 @@
+$Primary:#7b1fa2;
+$P-Light:#ae52d4;
+$P-Dark:#4a0072;
+$Secondary:#18227c;
+$S-Light:#514aac;
+$S-Dark:#00004f;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #ccc;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.tip-container{
+    background-color: white;
+    width: 375px;
+    position: relative;
+
+    header{
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 20px;
+        justify-content: center;
+        background-color: $P-Dark;
+        
+
+        h2{
+            margin-left: 4px;
+        }
+    }
+    .subheader{
+        background-color: $Primary;
+        text-align: center;
+        padding: 10px 0;
+        letter-spacing: 4px;
+        color: white;
+        text-shadow: 0 5px 10px white;
+        font-family: cursive;
+    }
+    main{
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        p{
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            padding: 10px ;
+
+            label{
+                display: block;
+                margin-bottom: 10px;
+                color: $S-Dark;
+                font-weight: 650;
+            }
+            input{
+                width: 100%;
+                padding: 10px;
+                border: 2px solid $S-Dark;
+                font-size: 15px;
+            }
+        }
+        button{
+            padding: 10px 30px;
+            font-size: 18px;
+            background-color: $S-Dark;
+            color: white;
+            justify-self: center;
+            border: none;
+            
+            &:active{
+                transform: scale(.98);
+            }
+        }
+    }
+    .error-modal{
+        position: absolute;
+        top: 25%;
+        background-color: crimson;
+        color: white;
+        width: 70%;
+        padding: 10px;
+        right: 15%;
+        display: none;
+    }
+    .modal-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+
+        .modal{
+            background-color: $Secondary;
+            color: white;
+            width: 300px;
+            padding: 20px;
+            &-info{
+                margin-bottom: 10px;
+                text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            }
+            &-component{
+                margin-bottom: 15px;
+                font-size: 20px;
+            }
+            button{
+                padding: 5px 10px;
+                font-size: 18px;
+                background-color: $P-Dark;
+                text-align: center;
+                border: 0;
+                color: white;
+                box-shadow: 0 2px 5px ;
+                outline: 0;
+                &:active{
+                    transform: scale(0.98);
+                }
+            }
+        }
+    }
+}
