@@ -17,10 +17,11 @@ const showError=(errMsg)=>{
   setTimeout(()=>errorModal.style.display='none',2000);
 }
 const updateModal=()=>{
+
   if(billAmnt.value==''||noOfPeople.value==''||tipPercent.value==''){
     showError('All Fields Must Be Filled');
-  }else if((/\D/gi).test(billAmnt.value)&&(/\D/gi).test(billAmnt.value)){
-    showError('Enter Valid Bill Value and Tip Percentage');
+  }else if((/\D/gi).test(billAmnt.value)||(/\D/gi).test(tipPercent.value)||(/\D/gi).test(noOfPeople.value)){
+    showError('Enter Valid Input');
   }else{
     tipAmount.innerText=Math.ceil(+(tipPercent.value/100)*billAmnt.value);
     totalBill.forEach(x=>{
