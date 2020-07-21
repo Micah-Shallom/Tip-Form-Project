@@ -162,6 +162,21 @@ body{
             }
         }
     }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+        p{
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        a{
+            font-size: 20px;
+            color: crimson;
+        }
+    }
 }
 @keyframes fade{
     from{opacity: 0;}
